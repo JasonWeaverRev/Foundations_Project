@@ -1,0 +1,27 @@
+{
+  "name": "foundations_project",
+  "version": "1.0.0",
+  "description": "API of a reimbursement system for a theoretical company",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node ./src/app.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonWeaverRev/Foundations_Project.git"
+  },
+  "author": "Jason Weaver",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasonWeaverRev/Foundations_Project/issues"
+  },
+  "homepage": "https://github.com/JasonWeaverRev/Foundations_Project#readme",
+  "dependencies": {
+    "winston": "^3.14.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
