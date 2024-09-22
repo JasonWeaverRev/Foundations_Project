@@ -5,11 +5,13 @@
 const express = require('express');
 const app = express();
 const logger = require('./util/logger.js');
+const userRouter = require("./controller/userRouter.js");
 
 
 // Server Port and Setup
 const PORT = 3000;
 app.use(express.json());
+
 
 // Setup logger for request calls
 app.use((req, res, next) => {
@@ -20,9 +22,9 @@ app.use((req, res, next) => {
 /**
  * Server
  */
-app.use("/", userRouter);
+app.use('/user', userRouter);
 
-// Listen to the HTTP port initiaztion
-server.listen(PORT, () => {
+// Listen to the HTTP port 
+app.listen(PORT, () => {
     logger.info(`Server is running on http://localhost:${PORT}`)
 });

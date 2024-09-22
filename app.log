@@ -1,2 +1,138 @@
 2024-09-18T13:41:17.113Z, [info]: Server is running on http://localhost:3000
 2024-09-18T13:41:26.423Z, [info]: [GET /]
+2024-09-22T19:30:58.497Z, [info]: Server is running on http://localhost:3000
+2024-09-22T19:31:56.531Z, [info]: Server is running on http://localhost:3000
+2024-09-22T19:33:55.166Z, [info]: Server is running on http://localhost:3000
+2024-09-22T19:34:01.195Z, [info]: Incoming POST : /register
+2024-09-22T19:35:27.552Z, [info]: Server is running on http://localhost:3000
+2024-09-22T19:35:32.321Z, [info]: Incoming POST : /register
+2024-09-22T19:35:39.138Z, [info]: Incoming POST : /user/register
+2024-09-22T19:36:50.222Z, [info]: Incoming POST : /user/register
+2024-09-22T19:40:43.329Z, [info]: Server is running on http://localhost:3000
+2024-09-22T19:40:50.827Z, [info]: Incoming POST : /user
+2024-09-22T19:42:08.121Z, [info]: Server is running on http://localhost:3000
+2024-09-22T19:42:15.494Z, [info]: Incoming POST : /user
+2024-09-22T19:42:20.746Z, [info]: Incoming POST : /
+2024-09-22T19:42:55.230Z, [info]: Incoming POST : /user
+2024-09-22T19:45:34.054Z, [info]: Incoming POST : /user
+2024-09-22T19:45:46.974Z, [info]: Incoming GET : /user
+2024-09-22T19:45:57.654Z, [info]: Incoming PUT : /user
+2024-09-22T19:46:01.225Z, [info]: Incoming PATCH : /user
+2024-09-22T19:46:04.181Z, [info]: Incoming POST : /user
+2024-09-22T19:48:07.597Z, [info]: Server is running on http://localhost:3000
+2024-09-22T19:48:17.208Z, [info]: Incoming POST : /user
+2024-09-22T19:48:19.159Z, [info]: Incoming GET : /user
+2024-09-22T19:50:31.082Z, [info]: Server is running on http://localhost:3000
+2024-09-22T19:50:35.502Z, [info]: Incoming GET : /user
+2024-09-22T19:50:40.355Z, [info]: Incoming POST : /user
+2024-09-22T19:51:09.829Z, [info]: Incoming GET : /
+2024-09-22T19:55:02.127Z, [info]: Server is running on http://localhost:3000
+2024-09-22T19:55:19.092Z, [info]: Incoming GET : /user
+2024-09-22T19:58:10.804Z, [info]: Server is running on http://localhost:3000
+2024-09-22T19:58:21.078Z, [info]: Incoming GET : /
+2024-09-22T19:58:25.684Z, [info]: Incoming GET : /user
+2024-09-22T19:58:28.417Z, [info]: Incoming GET : /users
+2024-09-22T19:58:34.404Z, [info]: Incoming GET : /users/
+2024-09-22T19:58:39.093Z, [info]: Incoming GET : /user/
+2024-09-22T19:59:20.294Z, [info]: Server is running on http://localhost:3000
+2024-09-22T19:59:25.584Z, [info]: Incoming GET : /user/
+2024-09-22T19:59:47.199Z, [info]: Server is running on http://localhost:3000
+2024-09-22T19:59:53.444Z, [info]: Incoming GET : /
+2024-09-22T20:00:36.919Z, [info]: Incoming GET : /
+2024-09-22T20:00:45.450Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:00:48.717Z, [info]: Incoming GET : /
+2024-09-22T20:05:27.508Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:06:34.529Z, [info]: Incoming POST : /user
+2024-09-22T20:06:34.768Z, [error]: 1 validation error detected: Value null at 'item' failed to satisfy constraint: Member must not be null
+2024-09-22T20:08:42.062Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:08:47.409Z, [info]: Incoming GET : /user
+2024-09-22T20:08:52.627Z, [info]: Incoming POST : /user
+2024-09-22T20:08:52.880Z, [error]: 1 validation error detected: Value null at 'item' failed to satisfy constraint: Member must not be null
+2024-09-22T20:11:04.916Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:11:06.694Z, [info]: Incoming POST : /user
+2024-09-22T20:11:06.925Z, [error]: 1 validation error detected: Value null at 'item' failed to satisfy constraint: Member must not be null
+2024-09-22T20:11:42.913Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:11:45.369Z, [info]: Incoming POST : /user
+2024-09-22T20:11:45.585Z, [error]: 1 validation error detected: Value null at 'item' failed to satisfy constraint: Member must not be null
+2024-09-22T20:13:22.113Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:13:25.848Z, [info]: Incoming POST : /user
+2024-09-22T20:13:26.084Z, [error]: 1 validation error detected: Value null at 'item' failed to satisfy constraint: Member must not be null
+2024-09-22T20:14:46.848Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:14:50.268Z, [info]: Incoming POST : /user
+2024-09-22T20:14:50.498Z, [error]: 1 validation error detected: Value null at 'item' failed to satisfy constraint: Member must not be null
+2024-09-22T20:16:12.885Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:16:15.346Z, [info]: Incoming POST : /user
+2024-09-22T20:17:08.870Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:17:11.078Z, [info]: Incoming POST : /user
+2024-09-22T20:17:11.357Z, [error]: 1 validation error detected: Value null at 'item' failed to satisfy constraint: Member must not be null
+2024-09-22T20:18:47.984Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:18:52.868Z, [info]: Incoming POST : /user
+2024-09-22T20:18:53.244Z, [error]: 1 validation error detected: Value null at 'item' failed to satisfy constraint: Member must not be null
+2024-09-22T20:28:42.084Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:28:50.287Z, [info]: Incoming POST : /user
+2024-09-22T20:28:50.552Z, [error]: 1 validation error detected: Value null at 'item' failed to satisfy constraint: Member must not be null
+2024-09-22T20:30:03.595Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:30:06.662Z, [info]: Incoming POST : /user
+2024-09-22T20:30:06.911Z, [error]: 1 validation error detected: Value null at 'item' failed to satisfy constraint: Member must not be null
+2024-09-22T20:30:48.004Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:30:56.528Z, [info]: Incoming POST : /user
+2024-09-22T20:30:56.741Z, [error]: 1 validation error detected: Value null at 'item' failed to satisfy constraint: Member must not be null
+2024-09-22T20:32:15.524Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:32:17.854Z, [info]: Incoming POST : /user
+2024-09-22T20:32:18.087Z, [error]: 1 validation error detected: Value null at 'item' failed to satisfy constraint: Member must not be null
+2024-09-22T20:38:05.554Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:38:10.017Z, [info]: Incoming POST : /user
+2024-09-22T20:38:10.259Z, [error]: 1 validation error detected: Value null at 'item' failed to satisfy constraint: Member must not be null
+2024-09-22T20:40:38.268Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:41:00.833Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:41:03.559Z, [info]: Incoming POST : /user
+2024-09-22T20:41:03.784Z, [error]: 1 validation error detected: Value null at 'item' failed to satisfy constraint: Member must not be null
+2024-09-22T20:55:45.758Z, [info]: Server is running on http://localhost:3000
+2024-09-22T20:55:51.304Z, [info]: Incoming GET : /user
+2024-09-22T20:58:18.780Z, [info]: Incoming POST : /user
+2024-09-22T20:58:19.084Z, [error]: 1 validation error detected: Value null at 'item' failed to satisfy constraint: Member must not be null
+2024-09-22T21:12:55.097Z, [info]: Server is running on http://localhost:3000
+2024-09-22T21:12:59.751Z, [info]: Incoming POST : /user
+2024-09-22T21:48:33.498Z, [info]: Server is running on http://localhost:3000
+2024-09-22T21:48:35.407Z, [info]: Incoming GET : /user
+2024-09-22T21:49:21.726Z, [info]: Incoming POST : /user
+2024-09-22T21:49:47.995Z, [info]: Server is running on http://localhost:3000
+2024-09-22T21:49:50.306Z, [info]: Incoming POST : /user
+2024-09-22T22:28:38.803Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:29:10.171Z, [info]: Incoming POST : /user
+2024-09-22T22:30:49.295Z, [info]: Incoming POST : /session
+2024-09-22T22:31:24.886Z, [info]: Incoming POST : /user/session
+2024-09-22T22:32:30.360Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:32:42.063Z, [info]: Incoming POST : /user/session
+2024-09-22T22:33:03.262Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:33:04.934Z, [info]: Incoming POST : /user/session
+2024-09-22T22:34:26.354Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:34:28.889Z, [info]: Incoming POST : /user/session
+2024-09-22T22:35:05.645Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:35:07.362Z, [info]: Incoming POST : /user/session
+2024-09-22T22:35:52.893Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:35:54.863Z, [info]: Incoming POST : /user/session
+2024-09-22T22:38:09.073Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:38:11.890Z, [info]: Incoming POST : /user/session
+2024-09-22T22:38:57.368Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:38:59.493Z, [info]: Incoming POST : /user/session
+2024-09-22T22:40:31.569Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:40:33.418Z, [info]: Incoming POST : /user/session
+2024-09-22T22:40:33.647Z, [error]: Value provided in ExpressionAttributeNames unused in expressions: keys: {#Username}
+2024-09-22T22:44:28.156Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:44:48.851Z, [info]: Incoming GET : /user/single
+2024-09-22T22:44:49.072Z, [error]: Value provided in ExpressionAttributeNames unused in expressions: keys: {#Username}
+2024-09-22T22:45:38.492Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:45:42.819Z, [info]: Incoming GET : /user/single
+2024-09-22T22:45:43.074Z, [error]: Value provided in ExpressionAttributeNames unused in expressions: keys: {#Username}
+2024-09-22T22:46:24.202Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:46:29.653Z, [info]: Incoming GET : /user/single
+2024-09-22T22:46:29.970Z, [error]: Value provided in ExpressionAttributeNames unused in expressions: keys: {#Username}
+2024-09-22T22:47:04.686Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:47:06.601Z, [info]: Incoming GET : /user/single
+2024-09-22T22:47:06.851Z, [error]: Query condition missed key schema element: UserID
+2024-09-22T22:48:43.113Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:48:45.209Z, [info]: Incoming GET : /user/single
+2024-09-22T22:48:45.449Z, [error]: ExpressionAttributeNames can only be specified when using expressions
+2024-09-22T22:49:24.987Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:49:27.914Z, [info]: Incoming GET : /user/single
