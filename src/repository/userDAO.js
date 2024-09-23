@@ -16,7 +16,6 @@ const logger= require("../util/logger");
 // Table and DynamoDB Document information
 const client = new DynamoDBClient({region: "us-east-1"});
 const documentClient = DynamoDBDocumentClient.from(client);
-TableName = "Users";
 
 // POST COMMANDS
 
@@ -27,7 +26,7 @@ async function postUser(Item) {
     // Create put command to the User Table adding in the user
 
     const command = new PutCommand( {
-        TableName,
+        TableName: "Users",
         Item
     });
 
@@ -47,7 +46,7 @@ async function postUser(Item) {
  */
 async function getAllUsers() {
     const command = new ScanCommand({
-        TableName
+        TableName: "Users"
     });
     try {
         const data = await documentClient.send(command);
@@ -63,7 +62,7 @@ async function getAllUsers() {
 async function getUser(username) {
 
     const command = new ScanCommand({
-        TableName,
+        TableName: "Users",
         FilterExpression: "#Username = :Username",
         ExpressionAttributeNames: {"#Username": "Username"},
         ExpressionAttributeValues: {":Username": username}
@@ -72,7 +71,6 @@ async function getUser(username) {
         const data = await documentClient.send(command);
         return data.Items[0];
     } catch(err) {
-        console.log("NOT FOUND IN DAO")
         logger.error(err);
     }
 }

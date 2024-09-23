@@ -4,7 +4,6 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const userDAO = require("../repository/userDAO");
-const ticketDAO = require("../repository/ticketDAO");
 const uuid = require("uuid");
 
 // Retrieving secret key for data encoding
@@ -68,25 +67,7 @@ async function validateUser(user) {
 
 }
 
-/**
- * Submit a reimbursement ticket to the ticket DB
- * 
- * @param {*} ticket 
- * @param {*} user 
- * @returns 
- */
-async function postTicket(ticket, user) {
- 
-    // Post ticket information
-    let data = await ticketDAO.postTicket({
-        TicketID: uuid.v4(),
-        ...ticket,
-        Employee_Username: user.Username,
-        Time_Submitted: Date.now()
-    });
-    return data;
 
-}
 
 
 // LOGIN
@@ -131,5 +112,4 @@ module.exports = {
     getAllUsers,
     getUser, 
     loginUser,
-    postTicket
 }

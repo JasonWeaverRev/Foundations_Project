@@ -12,7 +12,11 @@ const secrets = require("../../secrets.json");
 const secretKey = secrets.secretKey;
 
 const userService = require("../service/UserService");
+const ticketService = require("../service/ticketService");
 
+/**
+ * USERS
+ */
 
 // Register a new user
 userRouter.post('/', async (req, res) => {
@@ -24,17 +28,6 @@ userRouter.post('/', async (req, res) => {
     }
 });
 
-// Submit User Ticket
-// TODO: change USERSERVICE to TICKETSERVICE
-userRouter.post('/tickets', authenticateToken, async (req, res) => {
-    const ticket = await userService.postTicket(req.body, req.user);
-
-    if (ticket) {
-        res.status(201).json({message: `Created new ticket: ${JSON.stringify(req.body)}`});
-    } else {
-        res.status(400).json({message: `Error: Ticket could not be created`, receivedData: req.body});
-    }
-})
 
 // Get all users 
 userRouter.get('/',async (req, res) => {
@@ -45,21 +38,6 @@ userRouter.get('/',async (req, res) => {
         res.status(400).json({message : "Failed to get all users"});
     }
 });
-
-
-// Login
-userRouter.post('/session', async (req, res) => {
-    
-
-    const token = await userService.loginUser(req.body);
-    if(token) {
-        res.status(200).json({message: `Login successful: ${token}`});
-    } else {
-        res.status(400).json({message : "Invalid login credentials"});
-    }
-});
-
-
 
 // Get a single user by username
 // Test method
@@ -74,7 +52,85 @@ userRouter.get('/single', authenticateToken, async (req, res) => {
 });
 
 
+/**
+ * TICKETS
+ **/
 
+// Submit Ticket Request
+userRouter.post('/tickets', authenticateToken, async (req, res) => {
+    const ticket = await ticketService.postTicket(req.body, req.user);
+
+    if (ticket) {
+        res.status(201).json({message: `Created new ticket: ${JSON.stringify(req.body)}`});
+    } else {
+        res.status(400).json({message: `Error: Ticket could not be created`, receivedData: req.body});
+    }
+});
+
+// Get tickets from a user
+userRouter.get('/tickets', authenticateToken, async (req, res) => {
+
+    const tickets = await ticketService.getUserTickets(req.user);
+
+    if (tickets) {
+        res.status(201).json(tickets);
+    } else {
+        res.status(400).json({message: `Error: Could not retrieve tickets at this time`, receivedData: req.body});
+    }
+});
+
+// Get tickets from ALL users. FM level access only
+userRouter.get('/tickets/admin', authenticateAdminToken, async (req, res) => {
+
+    const tickets = await ticketService.getAllUserTickets();
+
+    if (tickets) {
+        res.status(201).json(tickets);
+    } else {
+        res.status(400).json({message: `Error: Could not retrieve tickets at this time`});
+    }
+});
+
+// View the earliest ticket submitted inside the ticket queue labelled "Pending"
+userRouter.get('/tickets/admin/queue', authenticateAdminToken, async (req, res) => {
+    
+    const ticket = await ticketService.getEarliestPendingTicket();
+
+    if (ticket) {
+        res.status(201).json(ticket);
+    } else {
+        res.status(400).json({message: `Error: Could not retrieve the first ticket in queue`});
+    }
+});
+
+// Change ticket status from pending to either Approved or Denied. Take from the earliest ticket
+userRouter.put('/tickets/admin/queue', authenticateAdminToken, async (req, res) => {
+    
+    const ticket = await ticketService.setTicketStatus(req.body);
+
+    if (ticket) {
+        res.status(201).json(ticket);
+    } else {
+        res.status(400).json({message: `Error: Could not change status of ticket`});
+    }
+});
+
+
+/**
+ * AUTHENTICATION
+ */
+
+// Login
+userRouter.post('/session', async (req, res) => {
+    
+
+    const token = await userService.loginUser(req.body);
+    if(token) {
+        res.status(200).json({message: `Login successful: ${token}`});
+    } else {
+        res.status(400).json({message : "Invalid login credentials"});
+    }
+});
 
 
 // ACCESS TOKENS
@@ -105,6 +161,7 @@ async function authenticateAdminToken(req, res, next) {
         const user = await decodeJWT(token);
         if (user.Role !== "FM") {
             res.status(403).json({message: "Forbidden Access. Only manager roles or higher status are permitted"});
+            return;
         }
         req.user = user;
         next();
