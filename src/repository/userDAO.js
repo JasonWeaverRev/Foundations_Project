@@ -1,5 +1,5 @@
 /**
- * Representation of the User Repository access
+ * Representation of the User Repository
  */
 const {DynamoDBClient} = require("@aws-sdk/client-dynamodb");
 const {
@@ -25,10 +25,12 @@ TableName = "Users";
  **/
 async function postUser(Item) {
     // Create put command to the User Table adding in the user
+
     const command = new PutCommand( {
         TableName,
         Item
     });
+
     // Send command to the DB
     try {
         const data = await documentClient.send(command);

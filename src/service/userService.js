@@ -4,6 +4,7 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const userDAO = require("../repository/userDAO");
+const ticketDAO = require("../repository/ticketDAO");
 const uuid = require("uuid");
 
 // Retrieving secret key for data encoding
@@ -24,8 +25,6 @@ async function postUser(user) {
         // Hash new user
         const saltRounds = 10;
         user.Password = await bcrypt.hash(user.Password, saltRounds);
-
-        console.log(user.Password);
 
         // Post user information
         let data = await userDAO.postUser({
@@ -69,7 +68,25 @@ async function validateUser(user) {
 
 }
 
+/**
+ * Submit a reimbursement ticket to the ticket DB
+ * 
+ * @param {*} ticket 
+ * @param {*} user 
+ * @returns 
+ */
+async function postTicket(ticket, user) {
+ 
+    // Post ticket information
+    let data = await ticketDAO.postTicket({
+        TicketID: uuid.v4(),
+        ...ticket,
+        Employee_Username: user.Username,
+        Time_Submitted: Date.now()
+    });
+    return data;
 
+}
 
 
 // LOGIN
@@ -80,7 +97,7 @@ async function loginUser(user) {
 
     // Validate Username and Password
     // Invalid Case
-    if (!foundUser.Username) {
+    if (!foundUser) {
         return null;
     }
     else if (!await bcrypt.compare(user.Password, foundUser.Password)) {
@@ -106,50 +123,6 @@ async function loginUser(user) {
     }
 }
 
-// Authenticate JWT
-async function authenticateToken(req, res, next) {
-    const authHeader = req.headers["authorization"];
-    const token = authHeader && authHeader.split(" ")[1];
-
-    if (!token) {
-        res.status(401).json({message: "Unauthorized Access"});
-    } else {
-        
-        const user = await decodeJWT(token);
-        req.user = user;
-        next();
-    }
-
-}
-// Authenticate Admin level JWT
-async function authenticateAdminToken(req, res, next) {
-    const authHeader = req.headers["authorization"];
-    const token = authHeader && authHeader.split(" ")[1];
-
-    if (!token) {
-        res.status(401).json({message: "Unauthorized Access"});
-    } else {
-
-        const user = await decodeJWT(token);
-        if (user.Role !== "FM") {
-            res.status(403).json({message: "Forbidden Access. Only manager roles or higher status are permitted"});
-        }
-        req.user = user;
-        next();
-    }
-}
-
-// Decode a JWT
-async function decodeJWT(token) {
-    try {
-        const user = await jwt.verify(token, secretKey);
-        return user;
-
-    } catch(err) {
-        console.error(err);
-    }
-    
-}
 
 
 
@@ -158,6 +131,5 @@ module.exports = {
     getAllUsers,
     getUser, 
     loginUser,
-    authenticateAdminToken,
-    authenticateToken
+    postTicket
 }

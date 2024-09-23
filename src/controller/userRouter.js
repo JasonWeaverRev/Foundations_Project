@@ -24,6 +24,18 @@ userRouter.post('/', async (req, res) => {
     }
 });
 
+// Submit User Ticket
+// TODO: change USERSERVICE to TICKETSERVICE
+userRouter.post('/tickets', authenticateToken, async (req, res) => {
+    const ticket = await userService.postTicket(req.body, req.user);
+
+    if (ticket) {
+        res.status(201).json({message: `Created new ticket: ${JSON.stringify(req.body)}`});
+    } else {
+        res.status(400).json({message: `Error: Ticket could not be created`, receivedData: req.body});
+    }
+})
+
 // Get all users 
 userRouter.get('/',async (req, res) => {
     const users = await userService.getAllUsers();

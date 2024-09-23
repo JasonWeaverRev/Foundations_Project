@@ -246,3 +246,53 @@
 2024-09-23T00:56:14.822Z, [info]: Server is running on http://localhost:3000
 2024-09-23T00:56:17.206Z, [info]: Incoming POST : /user/
 2024-09-23T00:56:21.978Z, [info]: Incoming POST : /user/
+2024-09-23T01:26:53.559Z, [info]: Server is running on http://localhost:3000
+2024-09-23T01:28:03.213Z, [info]: Incoming POST : /user/tickets
+2024-09-23T01:29:08.385Z, [info]: Incoming POST : /user/session
+2024-09-23T01:29:45.236Z, [info]: Server is running on http://localhost:3000
+2024-09-23T01:29:49.727Z, [info]: Incoming POST : /user/session
+2024-09-23T01:30:10.189Z, [info]: Incoming POST : /user
+2024-09-23T01:30:10.340Z, [error]: One or more parameter values were invalid: Missing the key TicketID in the item
+2024-09-23T01:30:23.357Z, [info]: Incoming POST : /user
+2024-09-23T01:30:23.509Z, [error]: One or more parameter values were invalid: Missing the key TicketID in the item
+2024-09-23T01:32:41.805Z, [info]: Server is running on http://localhost:3000
+2024-09-23T01:32:46.238Z, [info]: Incoming POST : /user
+2024-09-23T01:32:46.591Z, [error]: One or more parameter values were invalid: Missing the key TicketID in the item
+2024-09-23T01:34:27.450Z, [info]: Server is running on http://localhost:3000
+2024-09-23T01:34:35.441Z, [info]: Incoming POST : /user
+2024-09-23T01:34:35.812Z, [error]: One or more parameter values were invalid: Missing the key TicketID in the item
+2024-09-23T01:35:20.910Z, [info]: Server is running on http://localhost:3000
+2024-09-23T01:35:25.803Z, [info]: Incoming POST : /user
+2024-09-23T01:35:26.298Z, [error]: One or more parameter values were invalid: Missing the key TicketID in the item
+2024-09-23T01:36:10.716Z, [info]: Server is running on http://localhost:3000
+2024-09-23T01:36:12.752Z, [info]: Incoming POST : /user
+2024-09-23T01:36:13.101Z, [error]: 1 validation error detected: Value null at 'tableName' failed to satisfy constraint: Member must not be null
+2024-09-23T01:36:30.773Z, [info]: Server is running on http://localhost:3000
+2024-09-23T01:36:32.551Z, [info]: Incoming POST : /user
+2024-09-23T01:37:33.489Z, [info]: Server is running on http://localhost:3000
+2024-09-23T01:37:35.890Z, [info]: Incoming POST : /user
+2024-09-23T01:37:35.891Z, [error]: documentClient is not defined
+2024-09-23T01:37:36.169Z, [error]: One or more parameter values were invalid: Missing the key TicketID in the item
+2024-09-23T01:39:58.183Z, [info]: Server is running on http://localhost:3000
+2024-09-23T01:40:05.689Z, [info]: Incoming POST : /user
+2024-09-23T01:40:05.690Z, [error]: documentClient is not defined
+2024-09-23T01:40:06.005Z, [error]: One or more parameter values were invalid: Missing the key TicketID in the item
+2024-09-23T01:40:25.633Z, [info]: Server is running on http://localhost:3000
+2024-09-23T01:40:27.148Z, [info]: Incoming POST : /user
+2024-09-23T01:40:27.150Z, [error]: documentClient is not defined
+2024-09-23T01:40:27.438Z, [error]: One or more parameter values were invalid: Missing the key TicketID in the item
+2024-09-23T01:40:53.492Z, [info]: Server is running on http://localhost:3000
+2024-09-23T01:40:54.416Z, [info]: Incoming POST : /user
+2024-09-23T01:40:54.417Z, [error]: documentClient is not defined
+2024-09-23T01:41:16.147Z, [info]: Server is running on http://localhost:3000
+2024-09-23T01:41:18.008Z, [info]: Incoming POST : /user
+2024-09-23T01:41:18.009Z, [error]: documentClient is not defined
+2024-09-23T01:41:23.340Z, [info]: Incoming POST : /user
+2024-09-23T01:41:23.340Z, [error]: documentClient is not defined
+2024-09-23T01:43:39.780Z, [info]: Server is running on http://localhost:3000
+2024-09-23T01:43:42.461Z, [info]: Incoming POST : /user
+2024-09-23T01:43:42.462Z, [error]: documentClient is not defined
+2024-09-23T01:43:43.811Z, [info]: Incoming POST : /user
+2024-09-23T01:43:43.812Z, [error]: documentClient is not defined
+2024-09-23T01:44:08.172Z, [info]: Server is running on http://localhost:3000
+2024-09-23T01:44:09.857Z, [info]: Incoming POST : /user
