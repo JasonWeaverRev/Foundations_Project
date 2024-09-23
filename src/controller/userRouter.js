@@ -35,18 +35,11 @@ userRouter.get('/',async (req, res) => {
     }
 });
 
-// Get a single user by username
-userRouter.get('/single',async (req, res) => {
-    const user = await userService.getUser(req.body);
-    if(user) {
-        res.status(200).json({user});
-    } else {
-        res.status(400).json({message : "Failed to get user"});
-    }
-});
 
 // Login
 userRouter.post('/session', async (req, res) => {
+    
+
     const token = await userService.loginUser(req.body);
     if(token) {
         res.status(200).json({message: `Login successful: ${token}`});
@@ -55,12 +48,18 @@ userRouter.post('/session', async (req, res) => {
     }
 });
 
-userRouter.get('/session', async (req, res) => {
 
-});
 
-userRouter.get('/session-admin', async (req, res) => {
-
+// Get a single user by username
+// Test method
+userRouter.get('/single', userService.authenticateToken, async (req, res) => {
+    
+    const user = await userService.getUser(req.body);
+    if(user) {
+        res.status(200).json({user});
+    } else {
+        res.status(400).json({message : "Failed to get user"});
+    }
 });
 
 module.exports = userRouter;

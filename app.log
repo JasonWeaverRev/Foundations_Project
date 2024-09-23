@@ -136,3 +136,113 @@
 2024-09-22T22:48:45.449Z, [error]: ExpressionAttributeNames can only be specified when using expressions
 2024-09-22T22:49:24.987Z, [info]: Server is running on http://localhost:3000
 2024-09-22T22:49:27.914Z, [info]: Incoming GET : /user/single
+2024-09-22T22:54:19.059Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:54:26.614Z, [info]: Incoming GET : /user/single
+2024-09-22T22:55:24.505Z, [info]: Incoming POST : /user/session
+2024-09-22T22:55:42.381Z, [info]: Incoming POST : /user/session
+2024-09-22T22:56:49.761Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:56:57.451Z, [info]: Incoming POST : /user/session
+2024-09-22T22:57:04.608Z, [info]: Incoming POST : /user/session
+2024-09-22T22:57:53.875Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:57:57.591Z, [info]: Incoming POST : /user/session
+2024-09-22T22:58:43.720Z, [info]: Server is running on http://localhost:3000
+2024-09-22T22:58:59.245Z, [info]: Incoming GET : /user/single
+2024-09-22T22:59:18.725Z, [info]: Incoming GET : /user/single
+2024-09-22T22:59:28.124Z, [info]: Incoming POST : /user/session
+2024-09-22T23:00:09.375Z, [info]: Server is running on http://localhost:3000
+2024-09-22T23:00:11.951Z, [info]: Incoming POST : /user/session
+2024-09-22T23:01:57.713Z, [info]: Server is running on http://localhost:3000
+2024-09-22T23:01:59.195Z, [info]: Incoming POST : /user/session
+2024-09-22T23:02:43.933Z, [info]: Server is running on http://localhost:3000
+2024-09-22T23:02:46.868Z, [info]: Incoming POST : /user/session
+2024-09-22T23:04:12.189Z, [info]: Server is running on http://localhost:3000
+2024-09-22T23:04:14.717Z, [info]: Incoming POST : /user/session
+2024-09-22T23:42:59.225Z, [info]: Server is running on http://localhost:3000
+2024-09-22T23:43:35.020Z, [info]: Incoming POST : /user/
+2024-09-22T23:44:52.587Z, [info]: Server is running on http://localhost:3000
+2024-09-22T23:44:59.285Z, [info]: Incoming POST : /user/
+2024-09-22T23:45:18.672Z, [info]: Incoming GET : /user/single
+2024-09-22T23:56:16.857Z, [info]: Server is running on http://localhost:3000
+2024-09-22T23:56:57.308Z, [info]: Incoming POST : /user/session
+2024-09-22T23:57:21.504Z, [info]: Incoming POST : /user/session
+2024-09-22T23:57:59.891Z, [info]: Incoming POST : /user/
+2024-09-22T23:58:33.170Z, [info]: Server is running on http://localhost:3000
+2024-09-22T23:58:38.365Z, [info]: Incoming POST : /user/
+2024-09-22T23:59:46.084Z, [info]: Incoming POST : /user/session
+2024-09-23T00:14:06.416Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:14:28.329Z, [info]: Incoming GET : /user/single
+2024-09-23T00:15:42.399Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:15:46.886Z, [info]: Incoming GET : /user/single
+2024-09-23T00:19:31.252Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:19:36.089Z, [info]: Incoming GET : /user/single
+2024-09-23T00:20:47.985Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:21:49.363Z, [info]: Incoming POST : /user/
+2024-09-23T00:22:30.533Z, [info]: Incoming POST : /user/session
+2024-09-23T00:23:19.409Z, [info]: Incoming GET : /user/single
+2024-09-23T00:23:50.157Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:23:56.116Z, [info]: Incoming GET : /user/single
+2024-09-23T00:24:04.961Z, [info]: Incoming GET : /user/single
+2024-09-23T00:29:28.717Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:30:07.904Z, [info]: Incoming POST : /user/
+2024-09-23T00:30:28.339Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:30:33.057Z, [info]: Incoming POST : /user/
+2024-09-23T00:30:59.304Z, [info]: Incoming POST : /user/
+2024-09-23T00:36:01.935Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:36:14.580Z, [info]: Incoming POST : /user/
+2024-09-23T00:38:28.837Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:38:30.339Z, [info]: Incoming POST : /user/
+2024-09-23T00:38:37.319Z, [info]: Incoming POST : /user/
+2024-09-23T00:38:58.588Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:39:02.651Z, [info]: Incoming POST : /user/
+2024-09-23T00:39:09.366Z, [info]: Incoming POST : /user/
+2024-09-23T00:39:09.477Z, [error]: One or more parameter values were invalid: Missing the key Username in the item
+2024-09-23T00:39:29.170Z, [info]: Incoming POST : /user/
+2024-09-23T00:40:40.626Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:40:44.213Z, [info]: Incoming POST : /user/
+2024-09-23T00:41:25.031Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:41:27.702Z, [info]: Incoming POST : /user/
+2024-09-23T00:42:06.929Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:42:08.846Z, [info]: Incoming POST : /user/
+2024-09-23T00:42:38.896Z, [info]: Incoming POST : /user/
+2024-09-23T00:43:26.009Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:43:27.412Z, [info]: Incoming POST : /user/
+2024-09-23T00:43:34.759Z, [info]: Incoming POST : /user/
+2024-09-23T00:44:13.914Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:44:16.262Z, [info]: Incoming POST : /user/
+2024-09-23T00:44:18.803Z, [info]: Incoming POST : /user/
+2024-09-23T00:44:20.302Z, [info]: Incoming POST : /user/
+2024-09-23T00:44:21.129Z, [info]: Incoming POST : /user/
+2024-09-23T00:44:59.078Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:45:00.321Z, [info]: Incoming POST : /user/
+2024-09-23T00:45:00.678Z, [error]: One or more parameter values were invalid: Missing the key Username in the item
+2024-09-23T00:45:55.744Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:46:00.348Z, [info]: Incoming POST : /user/
+2024-09-23T00:46:00.645Z, [error]: One or more parameter values were invalid: Missing the key Username in the item
+2024-09-23T00:46:08.445Z, [info]: Incoming POST : /user/
+2024-09-23T00:46:44.503Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:46:49.218Z, [info]: Incoming POST : /user/
+2024-09-23T00:46:52.326Z, [info]: Incoming POST : /user/
+2024-09-23T00:48:14.837Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:48:18.729Z, [info]: Incoming POST : /user/
+2024-09-23T00:49:35.114Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:49:39.876Z, [info]: Incoming POST : /user/
+2024-09-23T00:49:42.664Z, [info]: Incoming POST : /user/
+2024-09-23T00:50:10.829Z, [info]: Incoming POST : /user/
+2024-09-23T00:50:25.640Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:50:49.634Z, [info]: Incoming POST : /user/
+2024-09-23T00:51:02.611Z, [info]: Incoming POST : /user/
+2024-09-23T00:51:29.533Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:51:32.205Z, [info]: Incoming POST : /user/
+2024-09-23T00:52:23.350Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:52:25.100Z, [info]: Incoming POST : /user/
+2024-09-23T00:52:58.450Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:53:00.051Z, [info]: Incoming POST : /user/
+2024-09-23T00:53:18.770Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:53:21.305Z, [info]: Incoming POST : /user/
+2024-09-23T00:54:10.340Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:54:12.963Z, [info]: Incoming POST : /user/
+2024-09-23T00:55:15.940Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:55:17.773Z, [info]: Incoming POST : /user/
+2024-09-23T00:56:14.822Z, [info]: Server is running on http://localhost:3000
+2024-09-23T00:56:17.206Z, [info]: Incoming POST : /user/
+2024-09-23T00:56:21.978Z, [info]: Incoming POST : /user/

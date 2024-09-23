@@ -19,8 +19,7 @@ const secretKey = secrets.secretKey;
  */
 async function postUser(user) {
 
-    // Validate the user
-    if(validateUser(user)) {
+    if(await validateUser(user)) {
 
         // Hash new user
         const saltRounds = 10;
@@ -39,6 +38,7 @@ async function postUser(user) {
     // Invalid user credentials for user registration
     return null;
 }
+
 
 /**
  * Retrieve a list of all users
@@ -63,38 +63,36 @@ async function getUser(user) {
  * @param {*} user User to be validated
  * @returns True if the user is valid, false if invalid
  */
-function validateUser(user) {
-    return (user.Username && user.Password && user.Role);
+async function validateUser(user) {
+   
+    return (user.Username && user.Password && user.Role && !(await userDAO.getUser(user.Username)));
+
 }
+
+
+
 
 // LOGIN
 
 async function loginUser(user) {
-    console.log(user);
-    const {Username, Password} = user;
-
     // Find the user within the User DB
-    const foundUser = userDAO.getUser(Username); 
-    console.log(foundUser);
+    const foundUser = await userDAO.getUser(user.Username); 
 
     // Validate Username and Password
     // Invalid Case
-
-    console.log(Password);
-
     if (!foundUser.Username) {
         return null;
     }
-    else if (!await bcrypt.compare(Password, foundUser.Password)) {
+    else if (!await bcrypt.compare(user.Password, foundUser.Password)) {
         return null;
     }
     // Valid Case
     else {
         const token = jwt.sign(
             {
-                UserID: user.UserID,
-                Username: user.Username,
-                Role: user.Role
+                UserID: foundUser.UserID,
+                Username: foundUser.Username,
+                Role: foundUser.Role
             },
             secretKey,
             {
@@ -108,9 +106,58 @@ async function loginUser(user) {
     }
 }
 
+// Authenticate JWT
+async function authenticateToken(req, res, next) {
+    const authHeader = req.headers["authorization"];
+    const token = authHeader && authHeader.split(" ")[1];
+
+    if (!token) {
+        res.status(401).json({message: "Unauthorized Access"});
+    } else {
+        
+        const user = await decodeJWT(token);
+        req.user = user;
+        next();
+    }
+
+}
+// Authenticate Admin level JWT
+async function authenticateAdminToken(req, res, next) {
+    const authHeader = req.headers["authorization"];
+    const token = authHeader && authHeader.split(" ")[1];
+
+    if (!token) {
+        res.status(401).json({message: "Unauthorized Access"});
+    } else {
+
+        const user = await decodeJWT(token);
+        if (user.Role !== "FM") {
+            res.status(403).json({message: "Forbidden Access. Only manager roles or higher status are permitted"});
+        }
+        req.user = user;
+        next();
+    }
+}
+
+// Decode a JWT
+async function decodeJWT(token) {
+    try {
+        const user = await jwt.verify(token, secretKey);
+        return user;
+
+    } catch(err) {
+        console.error(err);
+    }
+    
+}
+
+
+
 module.exports = {
     postUser,
     getAllUsers,
     getUser, 
-    loginUser
+    loginUser,
+    authenticateAdminToken,
+    authenticateToken
 }

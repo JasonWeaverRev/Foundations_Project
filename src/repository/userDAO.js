@@ -70,6 +70,7 @@ async function getUser(username) {
         const data = await documentClient.send(command);
         return data.Items[0];
     } catch(err) {
+        console.log("NOT FOUND IN DAO")
         logger.error(err);
     }
 }
