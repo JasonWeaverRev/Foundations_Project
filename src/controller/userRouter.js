@@ -1,7 +1,6 @@
 /**
  * Controller class that will facilitate interaction between the client and user repository
  */
-
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const express = require("express");
@@ -52,7 +51,7 @@ userRouter.post('/session', async (req, res) => {
 
 // Get a single user by username
 // Test method
-userRouter.get('/single', userService.authenticateToken, async (req, res) => {
+userRouter.get('/single', authenticateToken, async (req, res) => {
     
     const user = await userService.getUser(req.body);
     if(user) {
@@ -61,5 +60,56 @@ userRouter.get('/single', userService.authenticateToken, async (req, res) => {
         res.status(400).json({message : "Failed to get user"});
     }
 });
+
+
+
+
+
+// ACCESS TOKENS
+// Authenticate JWT
+async function authenticateToken(req, res, next) {
+    const authHeader = req.headers["authorization"];
+    const token = authHeader && authHeader.split(" ")[1];
+
+    if (!token) {
+        res.status(401).json({message: "Unauthorized Access"});
+    } else {
+        
+        const user = await decodeJWT(token);
+        req.user = user;
+        next();
+    }
+
+}
+// Authenticate Admin level JWT
+async function authenticateAdminToken(req, res, next) {
+    const authHeader = req.headers["authorization"];
+    const token = authHeader && authHeader.split(" ")[1];
+
+    if (!token) {
+        res.status(401).json({message: "Unauthorized Access"});
+    } else {
+
+        const user = await decodeJWT(token);
+        if (user.Role !== "FM") {
+            res.status(403).json({message: "Forbidden Access. Only manager roles or higher status are permitted"});
+        }
+        req.user = user;
+        next();
+    }
+}
+
+// Decode a JWT
+async function decodeJWT(token) {
+    try {
+        const user = await jwt.verify(token, secretKey);
+        return user;
+
+    } catch(err) {
+        console.error(err);
+    }
+    
+}
+
 
 module.exports = userRouter;
