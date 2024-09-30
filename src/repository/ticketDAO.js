@@ -16,6 +16,7 @@ const logger= require("../util/logger");
 // Table and DynamoDB Document information
 const client = new DynamoDBClient({region: "us-east-1"});
 const documentClient = DynamoDBDocumentClient.from(client);
+const TableName = "Tickets";
 
 
 // POST COMMANDS
@@ -26,7 +27,7 @@ const documentClient = DynamoDBDocumentClient.from(client);
 async function postTicket(Item) {
     // Create put command to the Ticket Table, adding in a new ticket
     const command = new PutCommand( {
-        TableName: "Tickets",
+        TableName,
         Item
     });
     // Send command to the DB
@@ -34,7 +35,7 @@ async function postTicket(Item) {
         const data = await documentClient.send(command);
         return data;
     } catch(err) {
-        logger.error(err);
+        logger.error(err); 
     }
 }
 
@@ -44,7 +45,7 @@ async function postTicket(Item) {
 async function getUserTickets(username) {
 
     const command = new ScanCommand({
-        TableName: "Tickets",
+        TableName,
         FilterExpression: "#username = :username",
         ExpressionAttributeNames: {"#username": "EmployeeUsername"},
         ExpressionAttributeValues: {":username": username}
@@ -63,7 +64,7 @@ async function getUserTickets(username) {
 async function getAllUserTickets() {
 
     const command = new ScanCommand({
-        TableName: "Tickets"
+        TableName
     });
     try {
         const data = await documentClient.send(command);
@@ -73,8 +74,34 @@ async function getAllUserTickets() {
     }
 }
 
+/**
+ * Change the status of a ticket
+ */
+async function setTicketStatus(tickID, tickStatus) {
+    const command = new UpdateCommand({
+        TableName,
+        Key: {
+            "TicketID": tickID
+        },
+        UpdateExpression: "set TicketStatus = :tickStatus",
+        ExpressionAttributeValues: {
+            ":tickStatus": tickStatus
+        }
+        
+    });
+
+    try {
+        const data = await documentClient.send(command);
+        return data;
+    } catch(err) {
+        logger.error(err);
+    }
+}
+
+
 module.exports = {
     postTicket,
     getUserTickets,
-    getAllUserTickets
+    getAllUserTickets,
+    setTicketStatus
 }

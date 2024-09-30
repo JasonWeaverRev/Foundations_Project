@@ -25,12 +25,25 @@ async function postUser(user) {
         const saltRounds = 10;
         user.Password = await bcrypt.hash(user.Password, saltRounds);
 
-        // Post user information
-        let data = await userDAO.postUser({
-            UserID: uuid.v4(),
-            ...user,
-        });
-        return data;
+        if (user.Role) {
+            // Post user information
+            let data = await userDAO.postUser({
+                UserID: uuid.v4(),
+                ...user,
+             });
+             return data;
+        }
+
+        else {
+            // Post user information
+            let data = await userDAO.postUser({
+                UserID: uuid.v4(),
+                ...user,
+                Role: "Employee"
+            });
+            return data;
+        }
+        
     }
 
     // Invalid user credentials for user registration
@@ -63,7 +76,13 @@ async function getUser(user) {
  */
 async function validateUser(user) {
    
-    return (user.Username && user.Password && user.Role && !(await userDAO.getUser(user.Username)));
+    if (user.Username && user.Password && !(await userDAO.getUser(user.Username))) {
+        if (user.Role) {
+            return (user.Role === "FM" || user.Role === "Employee");
+        }
+
+        return true;
+    }
 
 }
 

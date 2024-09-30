@@ -9,9 +9,9 @@ const ticketDAO = require("../repository/ticketDAO");
 /**
  * Submit a reimbursement ticket to the ticket DB
  * 
- * @param {*} ticket 
- * @param {*} user 
- * @returns 
+ * @param {*} ticket ticket meta data, including a reimbursement amount and description
+ * @param {*} user user the ticket is associated with
+ * @returns ticket submission meta data if successfully added, null otherwise
  */
 async function postTicket(ticket, user) {
     
@@ -21,8 +21,8 @@ async function postTicket(ticket, user) {
             TicketID: uuid.v4(),
             ...ticket,
             EmployeeUsername: user.Username,
-            TimeSubmitted: String(Date.now()),
-            Status: "Pending"
+            TimeSubmitted: Date.now(),
+            TicketStatus: "Pending"
         });
         return data;
     }
@@ -39,7 +39,7 @@ async function postTicket(ticket, user) {
 async function getUserTickets(user) {
 
     const tickets = await ticketDAO.getUserTickets(user.Username);
-    return tickets;
+    return tickets; 
 }
 
 /**
@@ -59,9 +59,18 @@ async function getAllUserTickets() {
  * @returns The earliest ticket in queue labelled "Pending". Null otherwise
  */
 async function getEarliestPendingTicket() {
+    const tickets = await sortByTime();
+    let pendTicket = null;
+    
+    for(let i = 0; i < tickets.length; i++) {
+        if (tickets[i].TicketStatus == "Pending") {
+            pendTicket = tickets[i];
+            break;
+        }
+    }
 
-    const tickets = await ticketDAO.getAllUserTickets();
-    return tickets;
+    return pendTicket;
+
 }
 
 /**
@@ -69,10 +78,52 @@ async function getEarliestPendingTicket() {
  * 
  * @returns The ticket if its respective ticket status was changed. Otherwise null
  */
-async function setTicketStatus(statusRequest) {
+async function setTicketStatus(status) {
 
-    return ticket;
+    if(await validateStatus(status)) {
+
+        let ticket = await getEarliestPendingTicket();
+        if (ticket) {
+
+            data = await ticketDAO.setTicketStatus(ticket.TicketID, status.Status);
+        
+            return ticket;
+        }
+        
+    }
+
+    return null;
 }
+
+
+/**
+ * 
+ * 
+ * @returns List of all tickets, sorted by time
+ */
+async function sortByTime() {
+    const tickets = await ticketDAO.getAllUserTickets();
+    const ticketList = [];
+    const sortedTickets = [];
+
+    // Create a list of all tickets, attached to a time
+    for (let i = 0; i < tickets.length; i++) {
+        ticketList.push([tickets[i], tickets[i].TimeSubmitted]);
+    }
+
+    // Sort the list by the attached time
+    ticketList.sort(function(a, b) {
+        return a[1] - b[1];
+    })
+    
+    // Create a list of all the sort tickets without the attached time
+    for (let x = 0; x < ticketList.length; x++) {
+        sortedTickets.push(ticketList[x][0]);
+    }
+    
+    return sortedTickets;
+}
+
 
 /**
  * Validates a ticket request. A ticket is valid if it has an amount and description
@@ -82,9 +133,17 @@ async function setTicketStatus(statusRequest) {
  */
 async function validateTicket(ticket) {
    
-    return (ticket.Amount && ticket.Description);
+    return (ticket.Amount && ticket.Description && (ticket.Amount >= 0));
 
 }
+
+async function validateStatus(status) {
+    console.log(status.Status);
+    return (status.Status && (status.Status === "Denied" || status.Status === "Approved"));
+
+}
+
+
 
 
 module.exports = {

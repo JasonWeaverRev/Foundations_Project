@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 /**
  * Server
  */
-app.use('/user', userRouter);
+app.use('/users', userRouter);
 
 // Listen to the HTTP port 
 app.listen(PORT, () => {

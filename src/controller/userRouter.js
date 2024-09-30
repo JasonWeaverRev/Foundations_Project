@@ -12,7 +12,12 @@ const secrets = require("../../secrets.json");
 const secretKey = secrets.secretKey;
 
 const userService = require("../service/UserService");
-const ticketService = require("../service/ticketService");
+const ticketService = require("../service/ticketService"); 
+
+
+
+
+
 
 /**
  * USERS
@@ -21,35 +26,31 @@ const ticketService = require("../service/ticketService");
 // Register a new user
 userRouter.post('/', async (req, res) => {
     const data = await userService.postUser(req.body);
+
     if (data) {
-        res.status(201).json({message: `Created new user: ${JSON.stringify(req.body)}`});
+        res.status(201).json({message: `Successfully created new user`, UserInformation: req.body});
     } else {
         res.status(400).json({message: `Error: User could not be created`, receivedData: req.body});
     }
 });
 
-
-// Get all users 
-userRouter.get('/',async (req, res) => {
-    const users = await userService.getAllUsers();
-    if(users) {
-        res.status(200).json({users});
-    } else {
-        res.status(400).json({message : "Failed to get all users"});
-    }
-});
-
-// Get a single user by username
-// Test method
-userRouter.get('/single', authenticateToken, async (req, res) => {
+// Login
+userRouter.post('/sessions', async (req, res) => {
     
-    const user = await userService.getUser(req.body);
-    if(user) {
-        res.status(200).json({user});
+
+    const token = await userService.loginUser(req.body);
+    if(token) {
+        res.status(200).json({message: `Login successful: ${token}`});
     } else {
-        res.status(400).json({message : "Failed to get user"});
+        res.status(400).json({message : "Please enter a valid username and password"});
     }
 });
+
+
+
+
+
+
 
 
 /**
@@ -61,7 +62,7 @@ userRouter.post('/tickets', authenticateToken, async (req, res) => {
     const ticket = await ticketService.postTicket(req.body, req.user);
 
     if (ticket) {
-        res.status(201).json({message: `Created new ticket: ${JSON.stringify(req.body)}`});
+        res.status(201).json({message: `Created new ticket`, Ticket: req.body});
     } else {
         res.status(400).json({message: `Error: Ticket could not be created`, receivedData: req.body});
     }
@@ -73,65 +74,55 @@ userRouter.get('/tickets', authenticateToken, async (req, res) => {
     const tickets = await ticketService.getUserTickets(req.user);
 
     if (tickets) {
-        res.status(201).json(tickets);
+        res.status(200).json(tickets);
     } else {
-        res.status(400).json({message: `Error: Could not retrieve tickets at this time`, receivedData: req.body});
+        res.status(404).json({message: `Error: Tickets not found`, receivedData: req.body});
     }
 });
 
 // Get tickets from ALL users. FM level access only
-userRouter.get('/tickets/admin', authenticateAdminToken, async (req, res) => {
+userRouter.get('/fm', authenticateAdminToken, async (req, res) => {
 
     const tickets = await ticketService.getAllUserTickets();
 
     if (tickets) {
-        res.status(201).json(tickets);
+        res.status(200).json(tickets);
     } else {
-        res.status(400).json({message: `Error: Could not retrieve tickets at this time`});
+        res.status(404).json({message: `Error: Tickets not found`});
     }
 });
 
-// View the earliest ticket submitted inside the ticket queue labelled "Pending"
-userRouter.get('/tickets/admin/queue', authenticateAdminToken, async (req, res) => {
+// Get the earliest, pending ticket from the ticket queue
+userRouter.get('/fm/queue', authenticateAdminToken, async (req, res) => {
     
     const ticket = await ticketService.getEarliestPendingTicket();
 
     if (ticket) {
-        res.status(201).json(ticket);
+        res.status(200).json(ticket);
     } else {
-        res.status(400).json({message: `Error: Could not retrieve the first ticket in queue`});
+        res.status(404).json({message: `Error: Could not find pending ticket`});
     }
 });
 
-// Change ticket status from pending to either Approved or Denied. Take from the earliest ticket
-userRouter.put('/tickets/admin/queue', authenticateAdminToken, async (req, res) => {
+// Change the status of the earliest, pending ticket from the ticket queue
+userRouter.put('/fm/queue', authenticateAdminToken, async (req, res) => {
     
-    const ticket = await ticketService.setTicketStatus(req.body);
+    const data = await ticketService.setTicketStatus(req.body);
 
-    if (ticket) {
-        res.status(201).json(ticket);
+    if (data) {
+        res.status(200).json({message: `Status of the ticket succesfully changed to: ${req.body.Status}`});
     } else {
-        res.status(400).json({message: `Error: Could not change status of ticket`});
+        res.status(400).json({message: `Error: Unable to change ticket status`});
     }
 });
+
+
+
 
 
 /**
  * AUTHENTICATION
  */
-
-// Login
-userRouter.post('/session', async (req, res) => {
-    
-
-    const token = await userService.loginUser(req.body);
-    if(token) {
-        res.status(200).json({message: `Login successful: ${token}`});
-    } else {
-        res.status(400).json({message : "Invalid login credentials"});
-    }
-});
-
 
 // ACCESS TOKENS
 // Authenticate JWT
@@ -160,7 +151,7 @@ async function authenticateAdminToken(req, res, next) {
 
         const user = await decodeJWT(token);
         if (user.Role !== "FM") {
-            res.status(403).json({message: "Forbidden Access. Only manager roles or higher status are permitted"});
+            res.status(403).json({message: "Forbidden Access. Finance manager users only"});
             return;
         }
         req.user = user;

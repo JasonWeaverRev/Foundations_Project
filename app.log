@@ -399,3 +399,308 @@
 2024-09-23T13:56:08.297Z, [info]: Incoming GET : /user/tickets/
 2024-09-23T13:56:11.862Z, [info]: Incoming GET : /user/tickets/admin
 2024-09-23T13:56:15.254Z, [info]: Incoming GET : /user/tickets/admin
+2024-09-26T19:16:55.089Z, [info]: Server is running on http://localhost:3000
+2024-09-26T19:16:57.751Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T19:16:58.007Z, [error]: Either the KeyConditions or KeyConditionExpression parameter must be specified in the request.
+2024-09-26T19:21:14.275Z, [info]: Server is running on http://localhost:3000
+2024-09-26T19:21:17.002Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T19:21:17.243Z, [error]: Either the KeyConditions or KeyConditionExpression parameter must be specified in the request.
+2024-09-26T19:22:54.108Z, [info]: Server is running on http://localhost:3000
+2024-09-26T19:22:56.068Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T19:22:56.304Z, [error]: The table does not have the specified index: TimeSubmitted-index
+2024-09-26T19:24:20.952Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T19:24:21.007Z, [error]: The table does not have the specified index: TimeSubmitted-index
+2024-09-26T19:24:27.072Z, [info]: Server is running on http://localhost:3000
+2024-09-26T19:24:28.747Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T19:24:29.017Z, [error]: The table does not have the specified index: TimeSubmitted-index
+2024-09-26T19:28:49.653Z, [info]: Server is running on http://localhost:3000
+2024-09-26T19:29:40.478Z, [info]: Incoming POST : /user/session
+2024-09-26T19:34:08.749Z, [info]: Incoming POST : /user/tickets
+2024-09-26T19:49:35.186Z, [info]: Server is running on http://localhost:3000
+2024-09-26T19:49:51.600Z, [info]: Incoming GET : /user/test
+2024-09-26T19:49:58.079Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T19:50:30.896Z, [info]: Server is running on http://localhost:3000
+2024-09-26T19:50:32.660Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:03:11.301Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:03:17.285Z, [info]: Incoming POST : /user/tickets/
+2024-09-26T20:03:23.848Z, [info]: Incoming GET : /user/tickets/admin
+2024-09-26T20:04:42.221Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:04:57.942Z, [info]: Server is running on http://localhost:3000
+2024-09-26T20:05:00.266Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:05:00.500Z, [error]: The table does not have the specified index: Time_Inde
+2024-09-26T20:05:27.173Z, [info]: Server is running on http://localhost:3000
+2024-09-26T20:05:29.209Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:05:29.469Z, [error]: The table does not have the specified index: Time_Inde
+2024-09-26T20:05:43.804Z, [info]: Server is running on http://localhost:3000
+2024-09-26T20:05:48.687Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:06:09.375Z, [info]: Server is running on http://localhost:3000
+2024-09-26T20:06:11.238Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:18:19.789Z, [info]: Incoming POST : /user/tickets/
+2024-09-26T20:18:59.259Z, [info]: Incoming POST : /user/tickets/
+2024-09-26T20:26:52.876Z, [info]: Incoming POST : /user/tickets/
+2024-09-26T20:28:46.056Z, [info]: Server is running on http://localhost:3000
+2024-09-26T20:28:48.328Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:33:24.786Z, [info]: Server is running on http://localhost:3000
+2024-09-26T20:33:27.912Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:34:35.519Z, [info]: Server is running on http://localhost:3000
+2024-09-26T20:34:38.099Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:35:12.817Z, [info]: Server is running on http://localhost:3000
+2024-09-26T20:35:14.466Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:36:19.591Z, [info]: Server is running on http://localhost:3000
+2024-09-26T20:36:21.189Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:36:42.036Z, [info]: Server is running on http://localhost:3000
+2024-09-26T20:36:43.860Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:37:04.984Z, [info]: Server is running on http://localhost:3000
+2024-09-26T20:37:06.500Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:38:55.509Z, [info]: Server is running on http://localhost:3000
+2024-09-26T20:38:57.724Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:44:48.472Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:46:11.946Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:55:59.461Z, [info]: Server is running on http://localhost:3000
+2024-09-26T20:56:01.328Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:56:31.794Z, [info]: Server is running on http://localhost:3000
+2024-09-26T20:56:33.196Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T20:57:51.107Z, [info]: Server is running on http://localhost:3000
+2024-09-26T20:57:52.647Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:00:45.994Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:00:47.138Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:01:03.066Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:01:03.953Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:01:47.475Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:01:48.743Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:09:23.069Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:09:24.811Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:09:44.581Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:09:48.495Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:10:44.431Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:10:45.537Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:11:43.822Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:11:45.294Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:11:59.888Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:12:01.518Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:12:55.078Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:12:57.280Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:13:29.174Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:13:31.094Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:38:03.779Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:38:10.680Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:38:30.346Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:38:34.249Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:39:01.607Z, [info]: Incoming PUT : /user/tickets/test
+2024-09-26T21:39:18.394Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:39:21.429Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:39:24.929Z, [info]: Incoming PUT : /user/tickets/test
+2024-09-26T21:39:49.245Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:39:51.367Z, [info]: Incoming PUT : /user/tickets/test
+2024-09-26T21:39:51.662Z, [error]: Invalid UpdateExpression: Attribute name is a reserved keyword; reserved keyword: Status
+2024-09-26T21:42:55.831Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:43:01.038Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:43:39.191Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:43:42.202Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:44:08.333Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:44:09.723Z, [info]: Incoming GET : /user/tickets/test
+2024-09-26T21:44:24.503Z, [info]: Incoming PUT : /user/tickets/test
+2024-09-26T21:44:24.611Z, [error]: The provided key element does not match the schema
+2024-09-26T21:45:37.036Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:45:40.248Z, [info]: Incoming PUT : /user/tickets/test
+2024-09-26T21:46:17.639Z, [info]: Incoming PUT : /user/tickets/test
+2024-09-26T21:46:17.747Z, [error]: ExpressionAttributeValues must not be empty
+2024-09-26T21:52:55.693Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:53:50.406Z, [info]: Incoming POST : /user/tickets/test
+2024-09-26T21:53:55.994Z, [info]: Incoming POST : /users
+2024-09-26T21:55:34.105Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:55:35.700Z, [info]: Incoming POST : /users
+2024-09-26T21:56:32.505Z, [info]: Incoming POST : /users
+2024-09-26T21:56:39.713Z, [info]: Incoming POST : /users
+2024-09-26T21:56:49.829Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:56:58.236Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:57:00.616Z, [info]: Incoming POST : /users
+2024-09-26T21:57:36.100Z, [info]: Server is running on http://localhost:3000
+2024-09-26T21:57:42.759Z, [info]: Incoming POST : /users/session
+2024-09-26T21:59:19.997Z, [info]: Incoming GET : /users/tickets
+2024-09-26T22:00:03.408Z, [info]: Incoming POST : /users/tickets
+2024-09-26T22:00:11.049Z, [info]: Incoming GET : /users/tickets
+2024-09-26T22:00:56.166Z, [info]: Incoming GET : /users/tickets/admin
+2024-09-26T22:03:03.010Z, [info]: Incoming POST : /users/
+2024-09-26T22:03:13.594Z, [info]: Incoming POST : /users/sessions
+2024-09-26T22:03:41.851Z, [info]: Incoming GET : /users/tickets
+2024-09-26T22:04:04.498Z, [info]: Incoming GET : /users/tickets
+2024-09-26T22:04:10.966Z, [info]: Incoming GET : /users/tickets/admin
+2024-09-26T22:04:36.206Z, [info]: Incoming GET : /users/tickets/
+2024-09-26T22:05:24.566Z, [info]: Incoming GET : /users/tickets/test
+2024-09-26T22:05:53.187Z, [info]: Incoming POST : /users/tickets/test
+2024-09-26T22:05:58.202Z, [info]: Incoming PUT : /users/tickets/test
+2024-09-26T22:05:58.310Z, [error]: ExpressionAttributeValues must not be empty
+2024-09-26T22:06:08.596Z, [info]: Incoming PUT : /users/tickets/test
+2024-09-26T22:06:15.067Z, [info]: Incoming PUT : /users/tickets/test
+2024-09-26T22:10:43.529Z, [info]: Server is running on http://localhost:3000
+2024-09-26T22:10:47.634Z, [info]: Incoming GET : /users/tickets/test
+2024-09-26T22:10:58.318Z, [info]: Incoming PUT : /users/tickets/test
+2024-09-26T22:12:42.717Z, [info]: Incoming POST : /users/tickets/
+2024-09-26T22:13:03.961Z, [info]: Incoming GET : /users/tickets/test
+2024-09-26T22:13:54.339Z, [info]: Incoming PUT : /users/tickets/test
+2024-09-26T22:16:40.223Z, [info]: Server is running on http://localhost:3000
+2024-09-26T22:17:04.985Z, [info]: Incoming POST : /users/tickets/
+2024-09-26T22:17:43.012Z, [info]: Incoming PUT : /users/tickets/test
+2024-09-26T22:19:09.864Z, [info]: Server is running on http://localhost:3000
+2024-09-26T22:19:39.701Z, [info]: Incoming POST : /users/tickets/test
+2024-09-26T22:19:50.552Z, [info]: Incoming POST : /users/tickets/
+2024-09-26T22:20:13.991Z, [info]: Incoming GET : /users/tickets/test
+2024-09-26T22:20:22.522Z, [info]: Incoming PUT : /users/tickets/test
+2024-09-26T22:21:33.914Z, [info]: Server is running on http://localhost:3000
+2024-09-26T22:21:35.347Z, [info]: Incoming PUT : /users/tickets/test
+2024-09-26T22:21:42.957Z, [info]: Incoming PUT : /users/tickets/test
+2024-09-26T22:21:51.635Z, [info]: Incoming PUT : /users/tickets/test
+2024-09-26T22:22:00.772Z, [info]: Incoming PUT : /users/tickets/test
+2024-09-26T22:30:08.610Z, [info]: Server is running on http://localhost:3000
+2024-09-26T22:31:27.051Z, [info]: Server is running on http://localhost:3000
+2024-09-26T22:31:59.181Z, [info]: Incoming POST : /users/
+2024-09-26T22:32:27.241Z, [info]: Incoming POST : /users/
+2024-09-26T22:33:22.033Z, [info]: Incoming POST : /users/tickets
+2024-09-26T22:33:36.085Z, [info]: Incoming POST : /users/tickets
+2024-09-26T22:34:27.554Z, [info]: Incoming POST : /users/session
+2024-09-26T22:34:33.707Z, [info]: Incoming POST : /users/session
+2024-09-26T22:35:20.109Z, [info]: Incoming POST : /users/tickets
+2024-09-26T22:36:19.229Z, [info]: Incoming POST : /users/tickets
+2024-09-26T22:36:53.141Z, [info]: Incoming GET : /users/tickets/admin
+2024-09-26T22:37:12.758Z, [info]: Incoming GET : /users/tickets/fm
+2024-09-26T22:37:21.227Z, [info]: Incoming GET : /users/tickets/fm/queue
+2024-09-26T22:37:24.671Z, [info]: Incoming PUT : /users/tickets/fm/queue
+2024-09-26T22:38:00.257Z, [info]: Incoming POST : /users/
+2024-09-26T22:38:24.795Z, [info]: Incoming POST : /users/session
+2024-09-26T22:38:58.896Z, [info]: Incoming GET : /users/tickets/admin
+2024-09-26T22:39:04.144Z, [info]: Incoming GET : /users/tickets/fm
+2024-09-26T22:39:15.118Z, [info]: Incoming GET : /users/tickets/fm/queue
+2024-09-26T22:39:54.450Z, [info]: Incoming PUT : /users/tickets/fm/queue
+2024-09-26T22:40:02.011Z, [info]: Incoming PUT : /users/tickets/fm/queue
+2024-09-26T22:40:06.872Z, [info]: Incoming PUT : /users/tickets/fm/queue
+2024-09-26T22:54:44.549Z, [info]: Server is running on http://localhost:3000
+2024-09-26T22:54:46.411Z, [info]: Incoming POST : /users/
+2024-09-26T22:56:08.888Z, [info]: Server is running on http://localhost:3000
+2024-09-26T22:56:10.852Z, [info]: Incoming POST : /users/
+2024-09-26T22:57:51.541Z, [info]: Server is running on http://localhost:3000
+2024-09-26T22:58:24.905Z, [info]: Incoming POST : /users/
+2024-09-26T22:59:17.644Z, [info]: Server is running on http://localhost:3000
+2024-09-26T22:59:20.375Z, [info]: Incoming POST : /users/
+2024-09-26T22:59:30.380Z, [info]: Incoming POST : /users/
+2024-09-26T23:06:17.844Z, [info]: Server is running on http://localhost:3000
+2024-09-26T23:06:22.998Z, [info]: Incoming POST : /users/tickets
+2024-09-26T23:07:06.390Z, [info]: Incoming POST : /users/tickets
+2024-09-26T23:07:21.365Z, [info]: Incoming POST : /users/tickets
+2024-09-26T23:09:03.634Z, [info]: Incoming POST : /users/sessions
+2024-09-26T23:09:22.485Z, [info]: Incoming GET : /users/fm
+2024-09-26T23:09:29.280Z, [info]: Incoming GET : /users/fm/queue
+2024-09-26T23:10:05.663Z, [info]: Incoming POST : /users/tickets
+2024-09-26T23:10:11.625Z, [info]: Incoming GET : /users/tickets
+2024-09-26T23:13:39.643Z, [info]: Incoming POST : /users/sessions
+2024-09-26T23:13:59.508Z, [info]: Incoming GET : /users/tickets
+2024-09-26T23:24:15.480Z, [info]: Server is running on http://localhost:3000
+2024-09-26T23:24:53.610Z, [info]: Incoming POST : /users/tickets
+2024-09-27T00:19:34.940Z, [info]: Incoming POST : /users
+2024-09-27T00:19:56.940Z, [info]: Incoming POST : /users
+2024-09-27T00:20:13.929Z, [info]: Incoming POST : /users
+2024-09-27T00:21:02.326Z, [info]: Incoming GET : /users/tickets
+2024-09-27T00:21:31.943Z, [info]: Incoming POST : /users/sessions
+2024-09-27T00:21:56.088Z, [info]: Incoming POST : /users/sessions
+2024-09-27T00:22:53.037Z, [info]: Incoming POST : /users/tickets
+2024-09-27T00:23:13.356Z, [info]: Incoming POST : /users/tickets
+2024-09-27T00:23:23.570Z, [info]: Incoming GET : /users/tickets
+2024-09-27T00:24:04.330Z, [info]: Incoming GET : /users/fm
+2024-09-27T00:24:15.167Z, [info]: Incoming GET : /users/fm/queue
+2024-09-27T00:24:21.839Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T00:25:01.856Z, [info]: Incoming POST : /users/
+2024-09-27T00:25:18.143Z, [info]: Incoming POST : /users/session
+2024-09-27T00:25:22.180Z, [info]: Incoming POST : /users/sessions
+2024-09-27T00:25:41.631Z, [info]: Incoming GET : /users/fm
+2024-09-27T00:26:19.917Z, [info]: Incoming GET : /users/fm/queue
+2024-09-27T00:26:52.496Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T00:27:05.249Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T00:27:16.331Z, [info]: Incoming GET : /users/fm/
+2024-09-27T00:27:20.484Z, [info]: Incoming GET : /users/fm/queue
+2024-09-27T00:27:30.915Z, [info]: Incoming GET : /users/fm/queue
+2024-09-27T00:27:35.879Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T00:27:40.947Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T00:27:42.258Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T00:27:42.834Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T00:28:14.092Z, [info]: Server is running on http://localhost:3000
+2024-09-27T00:28:32.862Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T00:29:01.925Z, [info]: Incoming POST : /users/sessions
+2024-09-27T00:29:17.815Z, [info]: Incoming GET : /users/fm
+2024-09-27T00:29:28.596Z, [info]: Incoming GET : /users/fm/queue
+2024-09-27T00:29:42.749Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T00:32:09.500Z, [info]: Server is running on http://localhost:3000
+2024-09-27T00:32:13.261Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T00:32:31.842Z, [info]: Server is running on http://localhost:3000
+2024-09-27T00:32:37.905Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T00:33:16.641Z, [info]: Incoming POST : /users/tickets
+2024-09-27T00:33:27.502Z, [info]: Incoming GET : /users/fm
+2024-09-27T00:33:36.431Z, [info]: Incoming GET : /users/fm/queue
+2024-09-27T00:33:54.449Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T00:33:57.407Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T00:35:20.661Z, [info]: Server is running on http://localhost:3000
+2024-09-27T00:35:25.134Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T00:36:23.853Z, [info]: Incoming POST : /users/sessions
+2024-09-27T00:36:42.000Z, [info]: Incoming GET : /users/tickets
+2024-09-27T12:43:29.422Z, [info]: Server is running on http://localhost:3000
+2024-09-27T12:44:01.038Z, [info]: Incoming POST : /users/
+2024-09-27T12:44:18.237Z, [info]: Incoming POST : /users/
+2024-09-27T12:44:41.662Z, [info]: Incoming POST : /users/
+2024-09-27T12:44:50.134Z, [info]: Incoming POST : /users/
+2024-09-27T12:44:58.782Z, [info]: Incoming POST : /users/
+2024-09-27T12:49:34.584Z, [info]: Server is running on http://localhost:3000
+2024-09-27T12:49:39.129Z, [info]: Incoming POST : /users/
+2024-09-27T12:49:56.607Z, [info]: Incoming POST : /users/
+2024-09-27T12:51:02.713Z, [info]: Incoming POST : /users/
+2024-09-27T12:51:21.474Z, [info]: Incoming POST : /users/
+2024-09-27T12:51:37.156Z, [info]: Incoming POST : /users/sessions
+2024-09-27T12:52:06.331Z, [info]: Incoming POST : /users/tickets
+2024-09-27T12:52:14.364Z, [info]: Incoming POST : /users/tickets
+2024-09-27T12:52:18.719Z, [info]: Incoming GET : /users/tickets
+2024-09-27T12:52:30.576Z, [info]: Incoming GET : /users/fm
+2024-09-27T12:52:54.630Z, [info]: Incoming GET : /users/fm/queue
+2024-09-27T12:53:14.161Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T12:53:27.084Z, [info]: Incoming GET : /users/fm/queue
+2024-09-27T12:53:36.319Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T12:53:40.066Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T12:53:41.029Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T12:53:56.418Z, [info]: Incoming GET : /users/tickets
+2024-09-27T12:56:37.407Z, [info]: Server is running on http://localhost:3000
+2024-09-27T13:09:38.960Z, [info]: Incoming POST : /users/
+2024-09-27T13:09:53.336Z, [info]: Incoming POST : /users/
+2024-09-27T13:10:03.345Z, [info]: Incoming POST : /users/
+2024-09-27T13:10:34.917Z, [info]: Incoming POST : /users/
+2024-09-27T13:11:58.989Z, [info]: Incoming POST : /users/
+2024-09-27T13:12:09.258Z, [info]: Incoming POST : /users/
+2024-09-27T13:12:58.472Z, [info]: Incoming POST : /users/
+2024-09-27T13:13:11.872Z, [info]: Incoming POST : /users/
+2024-09-27T13:13:37.256Z, [info]: Incoming GET : /users/tickets
+2024-09-27T13:13:51.268Z, [info]: Incoming POST : /users/sessions
+2024-09-27T13:14:24.266Z, [info]: Incoming POST : /users/tickets
+2024-09-27T13:14:53.748Z, [info]: Incoming GET : /users/tickets
+2024-09-27T13:15:19.895Z, [info]: Incoming GET : /users/fm
+2024-09-27T13:15:37.325Z, [info]: Incoming GET : /users/fm/queue
+2024-09-27T13:15:51.237Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T13:15:59.526Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T13:16:02.361Z, [info]: Incoming GET : /users/fm/queue
+2024-09-27T13:16:06.804Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T13:16:09.071Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T13:50:50.621Z, [info]: Incoming POST : /users/
+2024-09-27T13:50:57.737Z, [info]: Incoming POST : /users/
+2024-09-27T13:51:23.827Z, [info]: Incoming POST : /users/
+2024-09-27T13:51:33.657Z, [info]: Incoming POST : /users/
+2024-09-27T13:51:53.344Z, [info]: Incoming POST : /users/sessions
+2024-09-27T13:52:02.024Z, [info]: Incoming POST : /users/sessions
+2024-09-27T13:52:37.046Z, [info]: Incoming POST : /users/tickets
+2024-09-27T13:52:42.982Z, [info]: Incoming GET : /users/tickets
+2024-09-27T13:52:57.138Z, [info]: Incoming GET : /users/fm
+2024-09-27T13:53:30.500Z, [info]: Incoming POST : /users/sessions
+2024-09-27T13:53:53.684Z, [info]: Incoming GET : /users/fm
+2024-09-27T13:54:16.874Z, [info]: Incoming GET : /users/fm/queue
+2024-09-27T13:54:33.192Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T13:54:36.305Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T13:54:42.870Z, [info]: Incoming GET : /users/fm/queue
+2024-09-27T13:54:56.859Z, [info]: Incoming PUT : /users/fm/queue
+2024-09-27T13:55:05.295Z, [info]: Incoming GET : /users/fm/queue
+2024-09-27T13:55:35.110Z, [info]: Incoming POST : /users/sessions
+2024-09-27T13:55:38.882Z, [info]: Incoming POST : /users/sessions
+2024-09-27T13:55:54.733Z, [info]: Incoming GET : /users/tickets
